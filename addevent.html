@@ -1,0 +1,204 @@
+<html>
+<head><title>Add new Event</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+   <script src="jquery-ui.js"></script>
+<link rel="stylesheet" href="jquery-ui.css">
+<style>
+ .nav 
+ {
+  width: webkit-fill-available;
+ }
+ <!-- body 
+ {
+  line-height:0.1;
+ } -->
+ .nav-link 
+ {
+  display: block;
+  padding: 3px 84.7px;
+ }
+ .jumbotron 
+ {
+    padding: 65px 10px;
+    margin-bottom: 20px;
+    background-color: #e9ecef;
+    border-radius: 1px;
+ }
+ .dropdown-toggle::after 
+ {
+  display: table-column;
+ }
+ .dropdown-item 
+ {
+  display: -webkit-inline-box;
+ }  
+ .container 
+ {
+ padding:
+  max-width: -webkit-fill-available;
+ }
+ #footer .copyright 
+{
+	color: #9fa3a6;
+	padding-top:35px;
+	font-size: 15px;
+}
+
+#footer .copyright a 
+{
+	color: inherit;
+}
+
+.copyright
+{
+	display:inline-block;
+	float:left;
+}
+
+.developer
+{color: #9fa3a6;
+padding-top:35px;
+	float:right;
+}
+</style>
+<script>
+     $(function(){
+	 $("#datepicker").datepicker({
+	  <!--buttonImage:"calendar.gif",-->
+	 <!--buttonImageOnly:true,-->
+	 <!--showOn:"both",-->
+	 numberOfMonths:1});
+	 });
+	
+  </script>
+  <script>
+     $(function(){
+	 $("#datepicker2").datepicker({
+	 <!--buttonImage:"calendar.gif",-->
+	 <!--buttonImageOnly:true,-->
+	 <!--showOn:"both",-->
+	 numberOfMonths:1});
+	 });
+	
+  </script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h2 class="text-center">TENNES COACHING</h2>      
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" href="admindash1.html"><h4>Home</h4></a>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><h4>UpdateProfiles</h4></a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="updatecoach.html"><h4>Coach</h4></a>
+        <a class="dropdown-item" href="updateplayer.html" target="self"><h4>Player</h4></a>
+		</div>
+    </li>
+    <!--li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><h4>Coach</h4></a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="newcoach.html"><h4>New</h4></a>
+        <a class="dropdown-item" href="#coachupdate.html" target="self"><h4>Update</h4></a>
+		</div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><h4>Player</h4></a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="playernew.html"><h4>New</h4></a>
+        <a class="dropdown-item" href="#playerupdate.html" target="self"><h4>Update</h4></a>
+		</div>
+    </li-->
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#"><h4>Event</h4></a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="addevent.html"><h4>Add</h4></a>
+        <a class="dropdown-item" href="updateevent.html" target="self"><h4>Update</h4></a>
+		<a class="dropdown-item" href="deleteevent.html" target="self"><h4>Delete</h4></a>
+		</div>
+    </li>
+    <!--li class="nav-item">
+      <a class="nav-link" href="#event"><h4>Event</h4></a>
+	</li-->
+	<!--<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><h4>Reports</h4></a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#"><h4>Reports</h4></a>
+		<a class="dropdown-item" href="#"><h4>Reports</h4></a>
+		<a class="dropdown-item" href="#"><h4>Reports</h4></a>
+        <a class="dropdown-item" href="#"><h4>Reports</h4></a>
+		</div>
+    </li>-->
+	<li class="nav-item">
+      <a class="nav-link" href="#report.html"><h4>Report</h4></a>
+	</li>
+  </ul>
+</div>
+</nav></div>
+<div class="container1">
+<div class="main">
+<form class="form" method="post" action="#">
+<h3>Add Event</h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<label>EventName :</label>
+<input type="text" name="ename" id="ename">
+<p><label>EventFor:</label>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<label class="radio-inline"> <input type="radio" name="for" checked>&nbsp;&nbsp;Coach&nbsp;&nbsp;&nbsp;</label>
+     <label class="radio-inline"><input type="radio" name="for">&nbsp;&nbsp;Player&nbsp;&nbsp;&nbsp;</label>
+     <label class="radio-inline"><input type="radio" name="for">&nbsp;&nbsp;Both</label>
+</p>
+<label><i class="fa fa-calendar"></i>Event Start From:</label>
+<input type="text" id="datepicker">
+<label><i class="fa fa-calendar"></i>To:</label>
+<input type="text" id="datepicker2">
+
+
+
+
+
+
+
+
+
+
+
+<p><label>Stage of Playing :</label>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<label class="radio-inline"><input type="radio" name="optradio" checked>&nbsp;&nbsp;Beginner&nbsp;&nbsp;&nbsp;</label>
+<label class="radio-inline"><input type="radio" name="optradio">&nbsp;&nbsp;Advanced&nbsp;&nbsp;&nbsp;</label>
+<label class="radio-inline"><input type="radio" name="optradio">&nbsp;&nbsp;Professional</label>
+</p>
+<label>Contact No.:</label>
+<input type="text" name="dcontno" id="contact">
+<label>Email :</label>
+<input type="text" name="demail" id="email">
+    </label><input type="button" name="register" id="register" value="Add Event">
+</form>
+</div>
+<!--Footer-->
+<footer id="footer">
+	<p class="copyright">@Copyright 2019. All rights reserved.</p>
+	<p class="developer">Developed by: Nita & Preksha.</p>
+</footer>
+<!--End-Footer-->
+</div>
+</body></html>
